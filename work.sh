@@ -1,7 +1,7 @@
 make clean
 cd && mv ~/roms/xdroid-oss-twelve/* ~/b
 cd ~/roms/xdroid-oss-twelve
-rm -rf .repo * 
+rm -rf .repo
 repo init --depth=1 --no-repo-verify -u https://github.com/xdroid-oss/xd_manifest -b twelve -g default,-mips,-darwin,-notdefault > ss
 git clone https://github.com/XenStuff/manifest --depth 1 -b xd-bery .repo/local_manifests > ss
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) > sync && rm sync
