@@ -1,4 +1,5 @@
 make clean
+mkdir ~/b
 cd && mv ~/roms/xdroid-oss-twelve/* ~/b
 cd ~/roms/xdroid-oss-twelve
 rm -rf .repo
